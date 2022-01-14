@@ -11,8 +11,8 @@ interface ProductItemProps {
     title: string;
     description: string;
     image: string;
-    images: any;
-    options: any;
+    images: [string];
+    options: [string];
     avgRating: number;
     ratings: number;
     price: number;
