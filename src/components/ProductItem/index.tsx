@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, Image} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import styles from '../styles';
+import styles from './styles';
 
 interface ProductItemProps {
   item: {
