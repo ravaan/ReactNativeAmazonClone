@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, View} from 'react-native';
-import styles from '../../components/styles';
+import styles from '../../components/ProductItem/styles';
 import ProductItem from '../../components/ProductItem';
 import products from '../../data/products';
 
