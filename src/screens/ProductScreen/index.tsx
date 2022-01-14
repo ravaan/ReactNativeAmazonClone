@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView, Text} from 'react-native';
 import styles from './styles';
 import {Picker} from '@react-native-picker/picker';
 import QuantitySelector from '../../components/QuantitySelector';
 import Button from '../../components/Button';
+import ImageCarousel from '../../components/ImageCarousel';
 
 interface ProductItemProps {
   product: {
@@ -26,9 +27,10 @@ const ProductScreen = ({product}: ProductItemProps) => {
   );
   const [quantity, setQuantity] = useState(1);
   return (
-    <View style={styles.root}>
+    <ScrollView style={styles.root}>
       <Text style={styles.title}>{product.title}</Text>
       {/*{image carousel}*/}
+      <ImageCarousel images={product.images} />
       {/*{option selector}*/}
       <Picker
         selectedValue={selectedOption}
@@ -62,7 +64,7 @@ const ProductScreen = ({product}: ProductItemProps) => {
           console.warn('Buy Now!');
         }}
       />
-    </View>
+    </ScrollView>
   );
 };
 
